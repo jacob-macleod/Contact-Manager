@@ -1,0 +1,3 @@
+/home/jacob/Development/C++/Contact-Manager/build/CMakeFiles/hello_world.dir
+/home/jacob/Development/C++/Contact-Manager/build/CMakeFiles/edit_cache.dir
+/home/jacob/Development/C++/Contact-Manager/build/CMakeFiles/rebuild_cache.dir
