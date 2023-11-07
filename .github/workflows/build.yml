@@ -43,7 +43,7 @@ jobs:
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v0.0.0
+          tag_name: v0.0.1
           asset_path: "build/hello_world"
           asset_name: hello_world
           asset_content_type: application/zip
