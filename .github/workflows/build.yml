@@ -18,7 +18,6 @@ jobs:
 
     - name: Build
       run: |
-        mkdir build
         cd build
         cmake ..
         make
