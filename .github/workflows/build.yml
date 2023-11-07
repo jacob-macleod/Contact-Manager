@@ -33,12 +33,18 @@ jobs:
     permissions: write-all
     needs: build
     steps:
+      # Download artifacts from the previous job
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: hello_world
+          path: build
       - uses: underwindfall/create-release-with-debugapk@v2.0.0
         env: 
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v0.0.0
-          asset_path: "build/app/outputs/flutter-apk/app-release.apk"
-          asset_name: release.apk
+          asset_path: "build/hello_world"
+          asset_name: hello_world
           asset_content_type: application/zip
     
