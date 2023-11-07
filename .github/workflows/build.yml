@@ -28,4 +28,17 @@ jobs:
       with:
         name: hello_world
         path: build/hello_world
-   
+  create_release:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    needs: build
+    steps:
+      - uses: underwindfall/create-release-with-debugapk@v2.0.0
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: v0.0.0
+          asset_path: "build/app/outputs/flutter-apk/app-release.apk"
+          asset_name: release.apk
+          asset_content_type: application/zip
+    
